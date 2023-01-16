@@ -1,0 +1,41 @@
+<div id="singup">
+<div id="login">
+  <form #regform="ngForm" (ngSubmit)="onSubmitSig(regform)">
+    <h1>Login</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" name="email" ngModel required/>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" name="password" ngModel required/>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!regform.valid">Invia</button>
+  </form>
+  </div>
+
+
+
+  <div id="registrazione">
+<form #signform="ngForm" (ngSubmit)="onSubmitReg(signform)">
+<h1>Registrazione</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" name="nome" ngModel required/>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Cognome</mat-label>
+    <input matInput type="text" name="cognome" ngModel required/>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="email" name="email" ngModel required/>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" name="password" ngModel required/>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit" [disabled]="!signform.valid">Invia</button>
+</form>
+</div>
+</div>

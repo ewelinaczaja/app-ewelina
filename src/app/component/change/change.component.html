@@ -1,0 +1,18 @@
+<form [formGroup]="profiloform" (ngSubmit)="onSubmit()">
+<mat-form-field appearance="fill">
+    <input matInput type="text" name="nome" formControlName="nome" placeholder="Inserisci il tuo nome">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <input matInput type="text" name="cognome" formControlName="cognome" placeholder="Inserisci il tuo cognome">
+  </mat-form-field>
+
+<div>
+<label for="avatar">Carica un'immagine di profilo:</label>
+<input type="file"
+       id="avatar" name="avatar" formControlName="avatar"
+       accept="image/png, image/jpeg">
+       <button mat-raised-button color="primary" type="submit">Salva</button>
+</div>
+</form>
+
+
